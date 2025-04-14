@@ -8,7 +8,7 @@ p {
   font-size: 15px;
 }
 
-#main-visual>img {
+#main-visual > img {
   width: 100%;
 }
 
@@ -20,7 +20,7 @@ PC用のスタイル
   body {
     max-width: 1080px;
     min-width: 960px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
   }
 
   /* ヘッダー */
@@ -37,42 +37,53 @@ PC用のスタイル
   }
 
   /* ナビゲーションのリンクの装飾設定 */
-  #nav-pc>a {
+  #nav-pc > a {
     text-decoration: none;
     margin-left: 20px;
   }
 
-  #nav-pc>a:link {
+  #nav-pc > a:link, #nav-pc > a:visited {
     color: #0d0d0d;
   }
 
-  #nav-pc>a:visited {
-    color: #0d0d0d;
-  }
-
-  #nav-pc>a:hover {
+  #nav-pc > a:hover {
     color: #0d0d0d;
     text-decoration: underline;
   }
 
-  #nav-pc>a:active {
-    color: #0d0d0d;
+  #menu-sp {
+    display: none;
+  }
+
+  #nav-sp {
+    display: none;
   }
 }
 
-@media screen and (max=width:767px) {
- 
+/*================
+スマホ用のスタイル 
+=================*/
+@media screen and (max-width: 767px) {
+  /* 横幅設定 */
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
+
+  /* PCのナビゲーションを非表示に */
   #nav-pc {
     display: none;
   }
 
-  #menu-sp{
+  /* ハンバーガーメニュー */
+  #menu-sp {
+    display: block;
     float: right;
     padding: 0;
   }
 
-
-  #nav-sp{
+  /* スマホ用ナビゲーション */
+  #nav-sp {
     background-color: #ce933e;
     position: absolute;
     left: 0;
@@ -83,55 +94,48 @@ PC用のスタイル
     z-index: 100;
   }
 
-  #close{
+  #nav-sp nav ul {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  #nav-sp nav li {
+    list-style: none;
+  }
+
+  /* xボタン */
+  #close {
     position: absolute;
     top: 20px;
     right: 20px;
   }
 
-  #nav-sp ul {
-  padding-left: 0;
-
-  #nav-sp li {
-    list-style: none;
-  }
-
+  /* ナビゲーションメニュー用ロゴ */
   #logo-sp {
     margin: 80px 0 30px 20px;
   }
-#nav-sp nav a {
-display: block;
-}
 
-#nav-sp nav a:link {
-  color: #ffffff;
-}
+  #nav-sp a {
+    display: block;
+    text-decoration: none;
+  }
 
-#nav-sp nav a:visited {
-  color: #ffffff;
-}
+  #nav-sp a:link, #nav-sp a:visited {
+    color: #ffffff;
+  }
 
-#nav-sp a:active {
-  color: #ffffff;
-}
+  #nav-sp a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
 
-nav-sp .menu {
-  text-decoration: none;
-display: block;
-margin: 0 20px 0 20px;
-height:  44px;
-font-size: 16px;
-background-image: url("images/arrow.png");
-background-repeat: no-repeat;
-background-position: right top;
-}
-
-#menu-sp {
-  display: none;
-}
-
-#nap-sp {
-  display: none;
-}
-
+  .menu {
+    display: block;
+    margin: 0 20px;
+    height: 44px;
+    font-size: 16px;
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
 }
