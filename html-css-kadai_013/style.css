@@ -72,7 +72,7 @@ PC用のスタイル
 
   /* PCのナビゲーションを非表示に */
   #nav-pc {
-    display: none;
+    display:none;
   }
 
   /* ハンバーガーメニュー */
